@@ -4,18 +4,20 @@ main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  build(BuildContext context) => MaterialApp(
-    title: 'Flutter Image Example',
-    home: Scaffold(
-      appBar: AppBar(title: Text('Image Example')),
-      body: Padding(
-        padding: EdgeInsets.all(17),
-        child: Center(
-          child: ImageExample(),
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Image Example',
+      home: Scaffold(
+        appBar: AppBar(title: Text('Image Example')),
+        body: Padding(
+          padding: EdgeInsets.all(17),
+          child: Center(
+            child: ImageExample(),
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 class ImageExample extends StatefulWidget {
@@ -25,7 +27,5 @@ class ImageExample extends StatefulWidget {
 
 class _ImageExampleState extends State<ImageExample> {
   @override
-  build(BuildContext context) => Image(
-    image: AssetImage('images/sanepit-kun.png'),
-  );
+  build(BuildContext context) => Image(image: AssetImage('images/sanepit-kun.png'));
 }
